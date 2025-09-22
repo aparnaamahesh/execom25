@@ -732,65 +732,46 @@
 			<!-- /.row -->
 
       </div>
-        <style>
-/* ===== General Styles ===== */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* ===== Container & Rows ===== */
+<style>
+/* ===== Container ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
 }
+
+/* ===== Grid Layout for Team Members ===== */
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-.col-lg-4 {
-    width: 33.3333%;
-    padding: 0 15px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-}
-@media (max-width: 992px) {
-    .col-lg-4 {
-        width: 50%;
-    }
-}
-@media (max-width: 576px) {
-    .col-lg-4 {
-        width: 100%;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* always 3 cards per row */
+    gap: 30px; /* space between cards */
 }
 
 /* ===== Cards ===== */
 .card {
     background: #fff;
-    border-radius: 12px; /* Slightly rounded corners */
-    padding: 20px;
+    border-radius: 12px;
+    padding: 25px;
     text-align: center;
-    border: 2px solid rgba(0, 123, 255, 0.2); /* subtle blue border */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid rgba(0, 123, 255, 0.2);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    height: 500px; /* taller rectangular cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .card:hover {
     border-color: rgba(0, 123, 255, 0.5);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 /* ===== Team Images ===== */
 .our-team img {
     width: 100%;
-    height: 250px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 6px; /* Slightly rounded rectangular image */
-    margin-bottom: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 .our-team img:hover {
@@ -798,66 +779,21 @@ body {
 }
 
 /* ===== Team Content ===== */
-.team-content .title {
+.team-content h3.title {
     font-size: 1.2rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 .team-content .post {
-    font-size: 0.95rem;
-    color: #666;
-}
-
-/* ===== Social Icons ===== */
-.social {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    justify-content: center;
-}
-.social li {
-    margin: 0 5px;
-}
-.social li a {
+    font-size: 1rem;
     color: #555;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-.social li a:hover {
-    color: #007bff;
 }
 
-/* ===== Section Titles ===== */
-h2 {
-    color: #007bff;
-    margin-top: 50px;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-}
-hr {
-    border: none;
-    border-top: 2px solid #eee;
-    margin-bottom: 30px;
-}
-
-/* ===== Buttons ===== */
-.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
-}
-.btn-primary:hover {
-    background-color: #0056b3;
-    text-decoration: none;
+/* ===== Force cards to be same height ===== */
+.row .col-lg-4 {
+    display: contents; /* ensures the card fills its grid cell */
 }
 </style>
+
 </body>
 </html>
 	
