@@ -408,6 +408,70 @@
   </div>
   <div class="card"><!-- empty placeholder --></div>
 </div>
+<style>
+/* General container spacing */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Row styling */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Card styling */
+.card {
+  flex: 0 1 calc(33.333% - 20px); /* 3 cards per row with gap */
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 400px; /* increase height as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #f0f0f0; /* subtle border */
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-color: #c1e1ff; /* slight highlight on hover */
+}
+
+/* Image styling */
+.our-team img {
+  width: 100%;
+  height: 250px; /* adjust image height */
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* Team content */
+.team-content {
+  padding: 15px;
+}
+
+.team-content .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-content .post {
+  font-size: 0.95rem;
+  color: #555;
+}
+</style>
+
 </head>
 </html>
 		
