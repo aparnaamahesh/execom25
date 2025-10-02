@@ -9,7 +9,7 @@
     <style>
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e8f0f8;  /* very light blue-ish background */
+  background: #f8f9fa;
   margin: 0;
   padding: 0;
   color: #333;
@@ -25,6 +25,13 @@ h1, h2 {
 h1 {
   font-size: 2.5rem;
   margin-top: 20px;
+}
+
+h2 {
+  font-size: 2rem;       /* larger society headings */
+  font-weight: 800;       /* make it bolder */
+  margin-bottom: 30px;
+  color: #00274D;
 }
 
 p.lead {
@@ -46,30 +53,30 @@ p.lead {
 
 .card {
   flex: 0 1 calc(33% - 20px);
-  background: #fdfdfd; /* subtle off-white */
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 2px solid #d9e6f2;  /* very soft blue border */
-  border-top: 6px solid #4a90e2; /* subtle IEEE-style top accent */
+  border: 2px solid #e0e0e0;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-color: #c1e1ff;
 }
 
 .card img.photo {
   width: 100%;
   max-height: 280px;
   object-fit: contain;
-  background: #f0f4f7;
-  border-bottom: 1px solid #e0e0e0;
+  background: #f0f0f0;
+  border-bottom: 1px solid #eee;
 }
 
 .team-content {
