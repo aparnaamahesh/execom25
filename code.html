@@ -5,70 +5,119 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Execom</title>
   <style>
-    .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
+    /* ===== General Styling ===== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
+    h1, h2 {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #00274D; /* IEEE dark blue */
+    }
 
-.card {
-  flex: 0 1 calc(33.333% - 20px);
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 2px solid #f0f0f0;
-}
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  border-color: #c1e1ff;
-}
+    p.lead {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      color: #555;
+    }
 
-.our-team img {
-  width: 100%;
-  height: auto;        /* ensures heads aren’t cut off */
-  max-height: 250px;
-  object-fit: contain;
-  border-bottom: 1px solid #eee;
-}
+    /* ===== Cards Grid ===== */
+    .cards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
 
-.team-content {
-  padding: 15px;
-}
+    .card {
+      flex: 0 1 calc(33% - 20px);
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 2px solid #e0e0e0;
+    }
 
-.team-content .title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-family: 'Arial', sans-serif;  /* replace with IEEE-like font */
-}
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      border-color: #c1e1ff;
+    }
 
-.team-content .post {
-  font-size: 0.95rem;
-  color: #555;
-}
+    .card img.photo {
+      width: 100%;
+      max-height: 280px;
+      object-fit: contain; /* heads not cut off */
+      background: #f0f0f0;
+      border-bottom: 1px solid #eee;
+    }
 
+    .team-content {
+      padding: 15px;
+    }
+
+    .team-content .title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #00274D; /* IEEE blue */
+    }
+
+    .team-content .post {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #555;
+    }
+
+    /* ===== Responsive ===== */
+    @media screen and (max-width: 992px) {
+      .card {
+        flex: 0 1 calc(45% - 20px);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .card {
+        flex: 0 1 100%;
+      }
+    }
+
+    hr {
+      border: 1px solid #ccc;
+      margin: 30px 0;
+    }
   </style>
+</head>
 <body>
   <div class="container">
     <h1>Execom</h1>
-    <p class="lead">The pillar of every successful organization is none other than its executive committee. Called the EXECOM in short, the team behind RSET IEEE SB has been consistently coordinating the efforts of its 300+ members through the year.</p>
+    <p class="lead">
+      The pillar of every successful organization is none other than its executive committee. 
+      Called the EXECOM in short, the team behind RSET IEEE SB has been consistently coordinating 
+      the efforts of its 300+ members through the year.
+    </p>
 
+    <!-- ================= OFFICE BEARERS ================= -->
     <h2>OFFICE BEARERS</h2>
     <div class="cards-grid">
       <div class="card">
@@ -216,6 +265,9 @@
       </div>
     </div>
 
+    <hr>
+
+    <!-- ================= POWER AND ENERGY SOCIETY ================= -->
     <h2>POWER AND ENERGY SOCIETY</h2>
     <div class="cards-grid">
       <div class="card">
@@ -259,6 +311,9 @@
       </div>
     </div>
 
+    <hr>
+
+    <!-- ================= INDUSTRIAL APPLICATIONS SOCIETY ================= -->
     <h2>INDUSTRIAL APPLICATIONS SOCIETY</h2>
     <div class="cards-grid">
       <div class="card">
@@ -294,6 +349,9 @@
       </div>
     </div>
 
+    <hr>
+
+    <!-- ================= COMPUTER SOCIETY ================= -->
     <h2>COMPUTER SOCIETY</h2>
     <div class="cards-grid">
       <div class="card">
@@ -337,6 +395,9 @@
       </div>
     </div>
 
+    <hr>
+
+    <!-- ================= WOMEN IN ENGINEERING ================= -->
     <h2>WOMEN IN ENGINEERING</h2>
     <div class="cards-grid">
       <div class="card">
@@ -380,6 +441,9 @@
       </div>
     </div>
 
+    <hr>
+
+    <!-- ================= ROBOTICS & AUTOMATION SOCIETY ================= -->
     <h2>ROBOTICS & AUTOMATION SOCIETY</h2>
     <div class="cards-grid">
       <div class="card">
@@ -422,6 +486,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </body>
 </html>
