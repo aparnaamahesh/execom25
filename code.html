@@ -5,114 +5,72 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Execom</title>
   <style>
-    :root{
-      --container-max:1200px;
-      --card-bg:#ffffff;
-      --card-border:#eef3f8;
-      --accent:#c1e1ff;
-      --text:#222;
-      --muted:#555;
-      --gap:20px;
-      --card-min-height:420px;
-      --img-height:260px;
-    }
-
-    body{
-      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      margin:0;
-      color:var(--text);
-      background:#f7f9fb;
-      -webkit-font-smoothing:antialiased;
-    }
-
     .container{
       max-width:var(--container-max);
       margin:40px auto;
       padding:16px;
     }
+    body {
+  font-family: "IEEE", Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
 
-    h1,h2{ color:var(--text); margin:0 0 12px 0; }
-    h2{ margin-top:36px; font-size:1.35rem; }
-    hr{ border:0; border-top:1px solid #e6eef7; margin:12px 0 22px; }
+h2 {
+  color: #0072c6;
+  text-align: left;
+  margin-left: 10px;
+}
 
-    .lead{ margin:0 0 20px 0; color:var(--muted); line-height:1.5; }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
 
-    /* Use CSS grid for stable 3-per-row layout without placeholders */
-    .cards-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:var(--gap);
-      align-items:start;
-    }
+.card {
+  flex: 0 1 calc(33.333% - 20px);
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-    /* responsive breakpoints */
-    @media (max-width:992px){
-      .cards-grid{ grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width:600px){
-      .cards-grid{ grid-template-columns: 1fr; }
-    }
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
 
-    .card{
-      background:var(--card-bg);
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 6px 18px rgba(21,30,50,0.06);
-      border:1.5px solid var(--card-border);
-      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-      min-height:var(--card-min-height);
-      display:flex;
-      flex-direction:column;
-      text-align:center;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 16px 40px rgba(21,30,50,0.12);
-      border-color:var(--accent);
-    }
-
-    .card .photo{
-      width:100%;
-      height:var(--img-height);
-      background:#ddd;
-      display:block;
-      object-fit:cover;
-      object-position:center;
-      border-bottom:1px solid #eef3f7;
-      display:block;
-    }
-
-    .team-content{
-      padding:20px;
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      justify-content:center;
-      flex:1 1 auto;
-    }
-
-    .title{
-      font-size:1.05rem;
-      font-weight:600;
-      margin:0;
-      color:var(--text);
-    }
-    .our-team img {
+.our-team img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
-  object-position: top center;  
-    }
-    .post{
-      display:block;
-      color:var(--muted);
-      font-size:.95rem;
-      margin-top:4px;
-    }
+  height: 280px;
+  object-fit: contain;
+  padding-top: 10px;
+}
 
-    /* small utility */
-    .section-intro { margin-bottom:18px; color:var(--muted); }
+.team-content {
+  padding: 15px;
+}
+
+.team-content .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.team-content .post {
+  font-size: 1rem;
+  color: #555;
+}
+
   </style>
 </head>
 <body>
