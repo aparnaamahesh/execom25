@@ -1,891 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>Execom</title>
-	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Fontawesome CSS -->
-	<link href="css/all.css" rel="stylesheet">
-	<!-- Owl Carousel CSS -->
-	<link href="css/owl.carousel.min.css" rel="stylesheet">
-	<!-- Custom styles for this template -->
-	<link href="css/style.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Execom</title>
+  <style>
+    :root{
+      --container-max:1200px;
+      --card-bg:#ffffff;
+      --card-border:#eef3f8;
+      --accent:#c1e1ff;
+      --text:#222;
+      --muted:#555;
+      --gap:20px;
+      --card-min-height:420px;
+      --img-height:260px;
+    }
+
+    body{
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin:0;
+      color:var(--text);
+      background:#f7f9fb;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .container{
+      max-width:var(--container-max);
+      margin:40px auto;
+      padding:16px;
+    }
+
+    h1,h2{ color:var(--text); margin:0 0 12px 0; }
+    h2{ margin-top:36px; font-size:1.35rem; }
+    hr{ border:0; border-top:1px solid #e6eef7; margin:12px 0 22px; }
+
+    .lead{ margin:0 0 20px 0; color:var(--muted); line-height:1.5; }
+
+    /* Use CSS grid for stable 3-per-row layout without placeholders */
+    .cards-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:var(--gap);
+      align-items:start;
+    }
+
+    /* responsive breakpoints */
+    @media (max-width:992px){
+      .cards-grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width:600px){
+      .cards-grid{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background:var(--card-bg);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(21,30,50,0.06);
+      border:1.5px solid var(--card-border);
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      min-height:var(--card-min-height);
+      display:flex;
+      flex-direction:column;
+      text-align:center;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 16px 40px rgba(21,30,50,0.12);
+      border-color:var(--accent);
+    }
+
+    .card .photo{
+      width:100%;
+      height:var(--img-height);
+      background:#ddd;
+      display:block;
+      object-fit:cover;
+      object-position:center;
+      border-bottom:1px solid #eef3f7;
+      display:block;
+    }
+
+    .team-content{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      justify-content:center;
+      flex:1 1 auto;
+    }
+
+    .title{
+      font-size:1.05rem;
+      font-weight:600;
+      margin:0;
+      color:var(--text);
+    }
+
+    .post{
+      display:block;
+      color:var(--muted);
+      font-size:.95rem;
+      margin-top:4px;
+    }
+
+    /* small utility */
+    .section-intro { margin-bottom:18px; color:var(--muted); }
+  </style>
 </head>
 <body>
-	<div class="wrapper-main">
-		<!-- Top Bar -->
-		<div class="top-bar">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="social-media">
-							<ul>
-								<li><a href="https://www.facebook.com/rsetieeesb"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/ieee-student-branch-rajagiri-school-of-engineering-technology"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="https://www.instagram.com/ieeersetsb/"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="contact-details">
-							<ul>
-								<li><i class="fas fa-phone fa-rotate-90"></i></li>
-								<li><a href="https://goo.gl/maps/ESRNoxGuv74Pu9Ck7" style="color: rgb(255, 255, 255);"><i class="fas fa-map-marker-alt"></i></li></a>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light top-nav">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-				<img src="images/logo.png" alt="logo" />
-            </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="fas fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="index.html">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" href="about.html">Execom</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="events.html">Events</a>
-					</li>
-				</ul>
-            </div>
+  <div class="container">
+    <h1>Execom</h1>
+    <p class="lead">The pillar of every successful organization is none other than its executive committee. Called the EXECOM in short, the team behind RSET IEEE SB has been consistently coordinating the efforts of its 300+ members through the year.</p>
+
+    <h2>OFFICE BEARERS</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img class="photo" src="Execom/Dr. Elizabeth Rita Samuel.jpg" alt="Dr. Elizabeth Rita Samuel"/>
+        <div class="team-content">
+          <h3 class="title">Dr. Elizabeth Rita Samuel</h3>
+          <span class="post">Branch Counsellor</span>
         </div>
-    </nav>
-	
-	<!-- full Title -->
-	<div class="full-title">
-		<div class="container">
-			<!-- Page Heading/Breadcrumbs -->
-			<h1 class="mt-4 mb-3"> Execom</h1>
-			<div class="breadcrumb-main">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item">
-						<a href="index.html">Home</a>
-					</li>
-					<li class="breadcrumb-item active"> Execom </li>
-				</ol>
-			</div>
-		</div>
-	</div>
-	
-	</div>
-	<div class="container">
-		<!-- Team Members -->
-		<div class="team-members-box">  
-	<h2>OFFICE BEARERS</h2>
-	<div class="container">
-		<p>The pillar of every successful organization is none other than its executive committee. Called the EXECOM in short, the team behind RSET IEEE SB has been consistently coordinating the efforts of its 300+ members through the year. Given below is a gallery of the core team behind the RSET IEEE SB. A comprehensive list of the EXECOM members over the years can be viewed by clicking 'View All.'</p>
-	<!-- First row -->	
-	 <br>
-	 <br>
-	 <br>
-	<div class="row">
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="Execom/Dr. Elizabeth Rita Samuel.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Dr. Elizabeth Rita Samuel</h3>
-						<span class="post">Branch Counsellor</span>
-						<ul class="social">
-							<li><a href="mailto:elizabethrs@rajagiritech.edu.in"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/elizabeth-rita-samuel-b749907/"><i class="fab fa-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="Rinza Yunus.jpg.JPG" alt="" height="600"/>
-					<div class="team-content">
-						<h3 class="title">Rinza Yunus 
-						</h3>
-						<span class="post">Chair</span>
-						<!-- <ul class="social">
-							<li><a href="mailto:ben.baiju2001@gmail.com"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="https://www.ieeesbrset.org/execom"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="" alt="AliasEldo.jpg" />
-					<div class="team-content">
-						<h3 class="title">Alias Eldo 
-						</h3>
-						<span class="post">Vice-Chair
-						</span>
-						<!-- <ul class="social">
-							<li><a href="mailto:mariarojo@ieee.org"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="http://www.linkedin.com/in/maria-rojo-jose"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.row -->
+      </div>
 
-	<div class="row">
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="amelin alexander.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Amelin Alexander Rathappillil
-						</h3>
-						<span class="post">Secretary
-						</span>
-						<!-- <ul class="social">
-							
-							<li><a href="mailto:neilrojan3@gmail.com"><i class="fab fa-google-plus"></i></a></li>
-							
-							<li><a href="https://www.linkedin.com/in/neil-rojan-113526125"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="athira ajay.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Athira Ajay
-						</h3>
-						<span class="post">Treasurer
-						</span>
-						<!-- <ul class="social">
-							<li><a href="mailto:edwintmathew@ieee.org"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/edwin-thomas-mathew/"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="jala vishwa keerthi.png" alt="" />
-					<div class="team-content">
-						<h3 class="title">Jala Vishwa Keerthi
-						</h3>
-						<span class="post">Technical Coordinator
-						</span>
-						<!-- <ul class="social">
-							<li><a href="mailto:akaromalak@gmail.com"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/aromal-anil-kumar-94a190206"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.row -->
-
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="Adriel Bobby.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Adriel Bobby
-						</h3>
-						<span class="post">Electronic Communications Coordinator
-						</span>
-						<!-- <ul class="social">
-							<li><a href="mailto:thesanjananair@gmail.com"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="Sangeeth m s.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Sangeeth M S
-						</h3>
-						<span class="post">Membership Development Coordinator
-						</span>
-						<!-- <ul class="social">
-							<li><a href="mailto:chinnurosejose12@gmail.com"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/chinnu-rose-jose-68544a146"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.row -->
-
-	<div class="row">
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="Execom/Execom-2024/Behanan K Bahanan.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Behanan K Bahanan
-						</h3>
-						<span class="post">Membership Development Coordinator
-						</span>
-						<!-- <ul class="social">
-							
-							<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-							
-							<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="krishnapriya m.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Krishnapriya M
-						</h3>
-						<span class="post">Membership Development Coordinator
-						</span>
-						<!-- <ul class="social">
-							
-							<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-							
-							<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="Noahan zacharia.png" alt="" />
-					<div class="team-content">
-						<h3 class="title">Noahan Zachariah Pradeep 
-						</h3>
-						<span class="post">Membership Development Coordinator
-						</span>
-						<!-- <ul class="social">
-							
-							<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-							
-							<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="arun vijo.jpeg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Arun Vijo Tharakan
-						</h3>
-						<span class="post">Webmaster
-						</span>
-						<ul class="social">
-							
-							<!-- <li><a href="https://www.linkedin.com/in/vijaykv555/" target="_blank"><i
-										class="fab fa-linkedin"></i></a></li> -->
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    	<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="aparna mahesh.jpg" alt="" />
-					<div class="team-content">
-						<h3 class="title">Aparna Mahesh
-						</h3>
-						<span class="post">Webmaster
-						</span>
-						<ul class="social">
-							
-							<!-- <li><a href="https://www.linkedin.com/in/vijaykv555/" target="_blank"><i
-										class="fab fa-linkedin"></i></a></li> -->
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4 mb-4">
-			<div class="card h-100 text-center">
-				<div class="our-team">
-					<img class="img-fluid" src="Ryyan Safar.png" alt="" />
-					<div class="team-content">
-						<h3 class="title">Ryyan Safar 
-						</h3>
-						<span class="post">LINK Representative
-						</span>
-						<!-- <ul class="social">
-							<li><a href="mailto:namithasanthosh.nsr@ieee.org"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/namitha-santhosh-b057831b3"><i class="fab fa-linkedin"></i></a></li>
-						</ul> -->
-					</div>
-				</div>
-				<a href = "execom.html" class="btn btn-primary"> View all &rarr;</a>
-			</div>
-		</div>
-		
-	</div>
-
-
-</div>
-
-</div>
-			<!-- /.row -->
-			<h2>POWER AND ENERGY SOCIETY
-			</h2><hr><br>
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Execom/Hans John D'Cruz.png" alt="" />
-							<div class="team-content">
-								<h3 class="title">Mr. Hans John D'Cruz
-								</h3>
-								<span class="post">Chapter Advisor
-								</span>
-								<ul class="social">
-									
-									<li><a href="mailto:hansdcruz@gmail.com"><i class="fab fa-google-plus"></i></a></li>
-									
-									
-								</ul>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Diya Sarah.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Diya Sarah
-								</h3>
-								<span class="post">Chair
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Ashish John Binu.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Ashish John Binu
-								</h3>
-								<span class="post">Vice-Chair
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			<!-- /.row -->
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Neha Biju.JPEG" alt="" />
-							<div class="team-content">
-								<h3 class="title">Neha Biju</h3>
-								<span class="post">Secretary
-								</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Joel John Thumpayil.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title"> Joel John Thumpayil
-								</h3>
-								<span class="post">Treasurer
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-					
+      <div class="card">
+        <img class="photo" src="Rinza Yunus.jpg.JPG" alt="Rinza Yunus"/>
+        <div class="team-content">
+          <h3 class="title">Rinza Yunus</h3>
+          <span class="post">Chair</span>
         </div>
-				
-			</div>
-				
-			<br>
-			<!-- /.row -->
-			<h2>INDUSTRIAL APPLICATIONS SOCIETY
-			</h2><hr><br>
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Namitha Mariam John.jpeg" alt="" />
-							<div class="team-content">
-								<h3 class="title"> Namitha Mariam John 
-								</h3>
-								<span class="post">Chair
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Darsan Dileep.JPG" alt="" />
-							<div class="team-content">
-								<h3 class="title">Darsan Dileep
-								</h3>
-								<span class="post">Vice-Chair
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Shreya M.JPG" alt="" />
-							<div class="team-content">
-								<h3 class="title">Shreya M</h3>
-								<span class="post">Secretary
-								</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-								<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Nia Jobby .jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Nia Jobby</h3>
-								<span class="post">Treasurer
-								</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			
-		
-			
-			
-			<!-- /.row -->
-			<h2>COMPUTER SOCIETY
-			</h2><hr><br>
+      </div>
 
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Execom/Mrs. Anu Maria Joykutty.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Ms. Anu Maria Joykutty
-								</h3>
-								<span class="post">Chapter Advisor
-								</span>
-								<ul class="social">
-									
-									<li><a href="mailto:anumj@rajagiritech.edu.in"><i class="fab fa-google-plus"></i></a></li>
-									
-									<li><a href="https://www.linkedin.com/in/anu-maria-joykutty-6997671a7/"><i class="fab fa-linkedin"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Navaneeth K.B.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Navaneeth K.B 
-								</h3>
-								<span class="post">Chair</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Richard 1.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Richard Sabu
-								</h3>
-								<span class="post">Vice Chair</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /.row -->
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="NIHALA NIZAMUDEEN .HEIC" alt="" />
-							<div class="team-content">
-								<h3 class="title">Nihala Nizamudeen </h3>
-								<span class="post">secretary</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Punya D.JPG" alt="" />
-							<div class="team-content">
-								<h3 class="title">Punya D </h3>
-								<span class="post">Treasurer</span>
-								<!-- <ul class="social">
-									<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-									<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			<!-- /.row -->
-			<h2>WOMEN IN ENGINEERING
-			</h2><hr><br>
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Execom/Dr. Elizabeth Rita Samuel.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Dr. Elizabeth Rita Samuel
-								</h3>
-								<span class="post"> Chapter Advisor
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Sreepriya.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Sreepriya S</h3>
-								<span class="post">Chair</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Anagha N Nath.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">" Anagha N Nath" </h3>
-								<span class="post">Vice-Chair
-								</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Neha R Jacob.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Neha R Jacob</h3>
-								<span class="post">Secretary
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Ananya Merlyn George .jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Ananya Merlyn George </h3>
-								<span class="post">Treasurer</span>
-								<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><br>
-			<!-- /.row -->
-			<h2>ROBOTICS AND AUTOMATION SOCIETY
-			</h2><hr><br>
-			<div class="row">
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Execom/Dr. Elizabeth Rita Samuel.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Dr. Elizabeth Rita Samuel</h3>
-								<span class="post">Chapter Advisor</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Abner Sebastian Lopez .jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Abner Sebastian Lopez </h3>
-								<span class="post">Chair</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Akul Prasanth .jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Akul Prasanth </h3>
-								<span class="post">Vice Chair
-								</span>
-							<!-- <ul class="social">
-									<li><a href="mailto:thesanjananair@gmail.com" ><i class="far fa-envelope"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/sanjana-nair-4964511bb" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /.row -->
-			<div class="row">
-			<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="Adheetha krishnaja .jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Adheetha krishnaja </h3>
-								<span class="post">Secretary</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 mb-4">
-					<div class="card h-100 text-center">
-						<div class="our-team">
-							<img class="img-fluid" src="MILEE B KOKKATT.jpg" alt="" />
-							<div class="team-content">
-								<h3 class="title">Milee B Kokkatt </h3>
-								<span class="post">Treasurer</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><br>
-			<!-- /.row -->
+      <div class="card">
+        <img class="photo" src="AliasEldo.jpg" alt="Alias Eldo"/>
+        <div class="team-content">
+          <h3 class="title">Alias Eldo</h3>
+          <span class="post">Vice-Chair</span>
+        </div>
+      </div>
 
-			</div>
-	
-	
-	
-		<!-- Contact Us -->
-		<div class="touch-line">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8">
-					   <p>IEEE Student Branch
-						Rajagiri School of Engineering and Technology<br>
-						Kakkanad, Kochi<br>
-						Kerala - 682039</p>
-					</div>
-					<div class="col-md-4">
-					   <a class="btn btn-lg btn-secondary btn-block" href="#"> Contact Us </a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- /.container -->
-		<!--footer starts from here-->
-		<footer class="footer">
-			<div class="container bottom_border">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-6 col">
-						<h5 class="headin5_amrc col_white_amrc pt2">Social Media links</h5>
-						<!--headin5_amrc-->
-						<p class="mb10">Stay tuned to our latest activities through trending platforms!
-	
-						</p>
-						<ul class="footer-social">
-							<li><a class="linkedin hb-xs-margin" href="https://www.linkedin.com/company/ieee-student-branch-rajagiri-school-of-engineering-technology"><span class="hb hb-xs spin hb-twitter"><i class="fab fa-linkedin"></i></span></a></li>
-							<li><a class="instagram hb-xs-margin" href="https://www.instagram.com/ieeersetsb/"><span class="hb hb-xs spin hb-instagram"><i class="fab fa-instagram"></i></span></a></li>
-							<li><a class="facebook hb-xs-margin" href="https://www.facebook.com/rsetieeesb"><span class="hb hb-xs spin hb-facebook"><i class="fab fa-facebook"></i></span></a></li>
-							</ul>
-					</div>	
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<h5 class="headin5_amrc col_white_amrc pt2">Downloads</h5>
-						<!--headin5_amrc-->
-						<ul class="footer_ul_amrc">
-							<li><a href="RSET_SB_Annual_Report_2020-21.pdf"><i class="fas fa-long-arrow-alt-right"></i>RSET SB Report 2020-21</a></li>
-							<li><a href="IMPULSE_(RSET DEE Magazine).pdf"><i class="fas fa-long-arrow-alt-right"></i>Impulse Magazine (DEE & IEEE PES SBC RSET)</a></li>
-							<li><a href="RSET_IEEE_SB_2020-21.pdf"><i class="fas fa-long-arrow-alt-right"></i>Newsletter 2020-21</a></li>
-							<li><a href="RSET_IEEE_SB_2016-17.pdf"><i class="fas fa-long-arrow-alt-right"></i>Newsletter 2016-17</a></li>
-							<li><a href="RSET_IEEE_SB_2015-16.pdf"><i class="fas fa-long-arrow-alt-right"></i>Newsletter 2015-16</a></li>
-							<li><a href="RSET_IEEE_SB_2014-15.pdf"><i class="fas fa-long-arrow-alt-right"></i>Newsletter 2014-15</a></li>
-							<li><a href="RSET_IEEE_SB_2013-14.pdf"><i class="fas fa-long-arrow-alt-right"></i>Newsletter 2013-14</a></li>
-							<li><a href="RSET_PES_SBC_2020.pdf"><i class="fas fa-long-arrow-alt-right"></i>RSET PES SBC Report 2020</a></li>
-							<li><a href="RSET_WiE_Report.pdf"><i class="fas fa-long-arrow-alt-right"></i>RSET WiE Report 2020</a></li>
-							<li><a href="RSET_CS_2020.pdf"><i class="fas fa-long-arrow-alt-right"></i>RSET CS IEEE Report 2020</a></li>
-						</ul>
-						<!--footer_ul_amrc ends here-->
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6 col">
-						
-						<h5 class="headin5_amrc col_white_amrc pt2">Other links</h5>
-						<!--headin5_amrc ends here-->
-						<ul class="footer_ul_amrc">
-							<li><a href="https://www.ieee.org/"><i class="fas fa-long-arrow-alt-right"></i>IEEE.org</a></li>
-							<li><a href="https://www.ieeer10.org/"><i class="fas fa-long-arrow-alt-right"></i>IEEE Region 10</a></li>
-							<li><a href="https://ieeekerala.org/"><i class="fas fa-long-arrow-alt-right"></i>IEEE Kerala Section</a></li>
-							<li><a href="http://kochi.ieeekerala.org/"><i class="fas fa-long-arrow-alt-right"></i>IEEE Kochi Subsection</a></li>
-							<li><a href="IEEE Xplore Digital Library"><i class="fas fa-long-arrow-alt-right"></i>IEEE Xplore Digital Library</a></li>
-							
-						</ul>
-						<!--footer_ul2_amrc ends here-->
-					</div>
-					
-				</div>
-			</div>
-			<div class="map-main">
-				<!-- Embedded Google Map -->
-				<iframe width="100%" height="300px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Rajagiri school of engineering and technology&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-			</div>
-			<div class="container">
-				<p class="copyright text-center">Created By Nihal Rahoof, Vishal Sankar and Shiva Sundar
-					<a class="linkedin" href="https://www.linkedin.com/company/ieee-student-branch-rajagiri-school-of-engineering-technology"><span class="hb hb-xs spin hb-twitter"><i class="fab fa-linkedin"></i></span></a>
-				</p>
-			</div>
-		</footer>
-	</div>
-	
-	
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="js/jquery.appear.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/script.js"></script>
+      <div class="card">
+        <img class="photo" src="amelin alexander.jpg" alt="Amelin Alexander"/>
+        <div class="team-content">
+          <h3 class="title">Amelin Alexander Rathappillil</h3>
+          <span class="post">Secretary</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="athira ajay.jpg" alt="Athira Ajay"/>
+        <div class="team-content">
+          <h3 class="title">Athira Ajay</h3>
+          <span class="post">Treasurer</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="jala vishwa keerthi.png" alt="Jala Vishwa Keerthi"/>
+        <div class="team-content">
+          <h3 class="title">Jala Vishwa Keerthi</h3>
+          <span class="post">Technical Coordinator</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Adriel Bobby.jpg" alt="Adriel Bobby"/>
+        <div class="team-content">
+          <h3 class="title">Adriel Bobby</h3>
+          <span class="post">Electronic Communications Coordinator</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Sangeeth m s.jpg" alt="Sangeeth M S"/>
+        <div class="team-content">
+          <h3 class="title">Sangeeth M S</h3>
+          <span class="post">Membership Development Coordinator</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Behanan K Bahanan.jpg" alt="Behanan K Bahanan"/>
+        <div class="team-content">
+          <h3 class="title">Behanan K Bahanan</h3>
+          <span class="post">Membership Development Coordinator</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Krishnapriya m.jpg" alt="Krishnapriya M"/>
+        <div class="team-content">
+          <h3 class="title">Krishnapriya M</h3>
+          <span class="post">Membership Development Coordinator</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Noahan zacharia.png" alt="Noahan Zachariah Pradeep"/>
+        <div class="team-content">
+          <h3 class="title">Noahan Zachariah Pradeep</h3>
+          <span class="post">Membership Development Coordinator</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Arun vijo.jpeg" alt="Arun Vijo Tharakan"/>
+        <div class="team-content">
+          <h3 class="title">Arun Vijo Tharakan</h3>
+          <span class="post">Webmaster</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="aparna mahesh.jpg" alt="Aparna Mahesh"/>
+        <div class="team-content">
+          <h3 class="title">Aparna Mahesh</h3>
+          <span class="post">Webmaster</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Ryyan Safar.png" alt="Ryyan Safar"/>
+        <div class="team-content">
+          <h3 class="title">Ryyan Safar</h3>
+          <span class="post">LINK Representative</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="abhinav s 2.png" alt="Abhinav S"/>
+        <div class="team-content">
+          <h3 class="title">Abhinav S</h3>
+          <span class="post">Design Lead</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Sabharish P V.jpg" alt="Sabharish P V"/>
+        <div class="team-content">
+          <h3 class="title">Sabharish P V</h3>
+          <span class="post">Design Lead</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Devamanas S.JPG" alt="Devamanas S"/>
+        <div class="team-content">
+          <h3 class="title">Devamanas S</h3>
+          <span class="post">Media Lead</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Abhishek Iype.jpg" alt="Abhishek Iype"/>
+        <div class="team-content">
+          <h3 class="title">Abhishek Iype</h3>
+          <span class="post">Utility Lead</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>POWER AND ENERGY SOCIETY</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img class="photo" src="Execom/Hans John D'Cruz.png" alt="Hans John D'Cruz"/>
+        <div class="team-content">
+          <h3 class="title">Hans John D'Cruz</h3>
+          <span class="post">Chapter Advisor</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Diya Sarah.jpg" alt="Diya Sarah"/>
+        <div class="team-content">
+          <h3 class="title">Diya Sarah</h3>
+          <span class="post">Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Ashish John Binu.jpg" alt="Ashish John Binu"/>
+        <div class="team-content">
+          <h3 class="title">Ashish John Binu</h3>
+          <span class="post">Vice-Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Neha Biju.JPEG" alt="Neha Biju"/>
+        <div class="team-content">
+          <h3 class="title">Neha Biju</h3>
+          <span class="post">Secretary</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Joel John Thumpayil.jpg" alt="Joel John Thumpayil"/>
+        <div class="team-content">
+          <h3 class="title">Joel John Thumpayil</h3>
+          <span class="post">Treasurer</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>INDUSTRIAL APPLICATIONS SOCIETY</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img class="photo" src="Namitha Mariam John.jpeg" alt="Namitha Mariam John"/>
+        <div class="team-content">
+          <h3 class="title">Namitha Mariam John</h3>
+          <span class="post">Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Darsan Dileep.JPG" alt="Darsan Dileep"/>
+        <div class="team-content">
+          <h3 class="title">Darsan Dileep</h3>
+          <span class="post">Vice-Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Shreya M.JPG" alt="Shreya M"/>
+        <div class="team-content">
+          <h3 class="title">Shreya M</h3>
+          <span class="post">Secretary</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Nia Jobby .jpg" alt="Nia Jobby"/>
+        <div class="team-content">
+          <h3 class="title">Nia Jobby</h3>
+          <span class="post">Treasurer</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>COMPUTER SOCIETY</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img class="photo" src="Execom/Mrs. Anu Maria Joykutty.jpg" alt="Ms. Anu Maria Joykutty"/>
+        <div class="team-content">
+          <h3 class="title">Ms. Anu Maria Joykutty</h3>
+          <span class="post">Chapter Advisor</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Navaneeth K.B.jpg" alt="Navaneeth K.B"/>
+        <div class="team-content">
+          <h3 class="title">Navaneeth K.B</h3>
+          <span class="post">Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Richard 1.jpg" alt="Richard"/>
+        <div class="team-content">
+          <h3 class="title">Richard</h3>
+          <span class="post">Vice-Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Joel John Thumpayil.jpg" alt="Joel John Thumpayil"/>
+        <div class="team-content">
+          <h3 class="title">Joel John Thumpayil</h3>
+          <span class="post">Secretary</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Punya D.JPG" alt="Punya D"/>
+        <div class="team-content">
+          <h3 class="title">Punya D</h3>
+          <span class="post">Treasurer</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>WOMEN IN ENGINEERING</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img class="photo" src="Execom/Dr. Suma V.jpg" alt="Dr. Suma V"/>
+        <div class="team-content">
+          <h3 class="title">Dr. Suma V</h3>
+          <span class="post">Chapter Advisor</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Sreepriya.jpg" alt="Sreepriya S"/>
+        <div class="team-content">
+          <h3 class="title">Sreepriya S</h3>
+          <span class="post">Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Anagha N Nath.jpg" alt="Anagha N Nath"/>
+        <div class="team-content">
+          <h3 class="title">Anagha N Nath</h3>
+          <span class="post">Vice-Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Neha R Jacob.jpg" alt="Neha R Jacob"/>
+        <div class="team-content">
+          <h3 class="title">Neha R Jacob</h3>
+          <span class="post">Secretary</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Ananya Merlyn George .jpg" alt="Ananya Merlyn George"/>
+        <div class="team-content">
+          <h3 class="title">Ananya Merlyn George</h3>
+          <span class="post">Treasurer</span>
+        </div>
+      </div>
+    </div>
+
+    <h2>ROBOTICS & AUTOMATION SOCIETY</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <img class="photo" src="Execom/Dr. Ajith Kumar P.P.jpg" alt="Dr. Ajith Kumar P.P"/>
+        <div class="team-content">
+          <h3 class="title">Dr. Ajith Kumar P.P</h3>
+          <span class="post">Chapter Advisor</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Abner Sebastian Lopez .jpg" alt="Abner Sebastian Lopez"/>
+        <div class="team-content">
+          <h3 class="title">Abner Sebastian Lopez</h3>
+          <span class="post">Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Akul Prasanth .jpg" alt="Akul Prasanth"/>
+        <div class="team-content">
+          <h3 class="title">Akul Prasanth</h3>
+          <span class="post">Vice-Chair</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="Adheetha krishnaja .jpg" alt="Adheetha krishnaja"/>
+        <div class="team-content">
+          <h3 class="title">Adheetha krishnaja</h3>
+          <span class="post">Secretary</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="photo" src="MILEE B KOKKATT.jpg" alt="Milee B Kokkatt"/>
+        <div class="team-content">
+          <h3 class="title">Milee B Kokkatt</h3>
+          <span class="post">Treasurer</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
