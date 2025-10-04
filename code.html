@@ -5,106 +5,111 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Execom</title>
   <style>
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-    h1, h2 {
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #00274D; 
-    }
+h1, h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00274D;
+}
 
-    h1 {
-      font-size: 2.5rem;
-      margin-top: 20px;
-    }
+h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
 
-    p.lead {
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-      margin-bottom: 40px;
-      font-size: 1.1rem;
-      color: #555;
-    }
+h2 {
+  font-size: 2rem;       
+  font-weight: 800;       
+  margin-bottom: 30px;
+  color: #00274D;
+}
 
-   
-    .cards-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 50px;
-    }
+p.lead {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #555;
+}
 
-    .card {
-      flex: 0 1 calc(33% - 20px);
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      border: 2px solid #e0e0e0;
-    }
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      border-color: #c1e1ff;
-    }
+.card {
+  flex: 0 1 calc(33% - 20px);
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+}
 
-    .card img.photo {
-      width: 100%;
-      max-height: 280px;
-      object-fit: contain;
-      background: #f0f0f0;
-      border-bottom: 1px solid #eee;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-color: #c1e1ff;
+}
 
-    .team-content {
-      padding: 15px;
-    }
+.card img.photo {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  background: #f0f0f0;
+  border-bottom: 1px solid #eee;
+}
 
-    .team-content .title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 5px;
-      color: #00274D; 
-    }
+.team-content {
+  padding: 15px;
+}
 
-    .team-content .post {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #555;
-    }
+.team-content .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #00274D;
+}
 
-    @media screen and (max-width: 992px) {
-      .card {
-        flex: 0 1 calc(45% - 20px);
-      }
-    }
+.team-content .post {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
 
-    @media screen and (max-width: 600px) {
-      .card {
-        flex: 0 1 100%;
-      }
-    }
+@media screen and (max-width: 992px) {
+  .card {
+    flex: 0 1 calc(45% - 20px);
+  }
+}
 
-    hr {
-      border: 1px solid #ccc;
-      margin: 30px 0;
-    }
+@media screen and (max-width: 600px) {
+  .card {
+    flex: 0 1 100%;
+  }
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 30px 0;
+}
   </style>
 </head>
 <body>
@@ -254,13 +259,8 @@
         </div>
       </div>
 
-      <div class="card">
-        <img class="photo" src="Abhishek Iype.jpg" alt="Abhishek Iype"/>
-        <div class="team-content">
-          <h3 class="title">Abhishek Iype</h3>
-          <span class="post">Utility Lead</span>
-        </div>
-      </div>
+      <!-- Abhishek Iype card removed as requested -->
+
     </div>
 
     <hr>
@@ -269,7 +269,7 @@
     <h2>POWER AND ENERGY SOCIETY</h2>
     <div class="cards-grid">
       <div class="card">
-        <img class="photo" src="Ginnes K John.png">
+        <img class="photo" src="Ginnes K John.png" alt="Ginnes K John">
         <div class="team-content">
           <h3 class="title">Ginnes K John</h3>
           <span class="post">PES Chapter Advisor</span>
@@ -315,7 +315,7 @@
     <h2>INDUSTRIAL APPLICATIONS SOCIETY</h2>
      <div class="cards-grid">
       <div class="card">
-        <img class="photo" src="Nitheesh Kurian.png">
+        <img class="photo" src="Nitheesh Kurian.png" alt="Nitheesh Kurian">
         <div class="team-content">
           <h3 class="title">Nitheesh Kurian</h3>
           <span class="post">IAS Chapter Advisor</span>
@@ -397,12 +397,12 @@
     </div>
   </div>
 </div>
-
+<hr>
 
 <h2>COMPUTER SOCIETY</h2>
 <div class="cards-grid">
   <div class="card">
-    <img class="photo" src="Ms. Anu Maria Joykutty.png"/>
+    <img class="photo" src="Ms. Anu Maria Joykutty.png" alt="Ms. Anu Maria Joykutty"/>
     <div class="team-content">
       <h3 class="title">Ms. Anu Maria Joykutty</h3>
       <span class="post">Chapter Advisor</span>
@@ -441,14 +441,14 @@
     </div>
   </div>
 </div>
-     </hr>
+     <hr>
 
 
     <!-- ================= WOMEN IN ENGINEERING ================= -->
     <h2>WOMEN IN ENGINEERING</h2>
     <div class="cards-grid">
       <div class="card">
-        <img class="photo" src="Dr. Elizabeth Rita Samuel.png">
+        <img class="photo" src="Dr. Elizabeth Rita Samuel.png" alt="Dr. Elizabeth Rita Samuel">
         <div class="team-content">
           <h3 class="title">Dr. Elizabeth Rita Samuel</h3>
           <span class="post">WIE Chapter Advisor</span>
@@ -493,7 +493,7 @@
     <h2>ROBOTICS & AUTOMATION SOCIETY</h2>
     <div class="cards-grid">
       <div class="card">
-        <img class="photo" src="Dr. Elizabeth Rita Samuel.png">
+        <img class="photo" src="Dr. Elizabeth Rita Samuel.png" alt="Dr. Elizabeth Rita Samuel">
         <div class="team-content">
           <h3 class="title">Dr. Elizabeth Rita Samuel</h3>
           <span class="post">RAS Chapter Advisor</span>
@@ -532,7 +532,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </body>
 </html>
